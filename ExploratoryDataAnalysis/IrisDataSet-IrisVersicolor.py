@@ -17,6 +17,9 @@ print(iris_df_versi.head(5))
 iris_versi_petal_length = list(iris_df_versi['petal_length'])
 print(iris_versi_petal_length)
 
+#setting the seaborn setting as default
+sns.set()
+
 #ploting the histogram on petal lengths of iris versicolor
 plt.hist(iris_versi_petal_length)
 plt.show()
