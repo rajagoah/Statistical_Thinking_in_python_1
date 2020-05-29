@@ -1,2 +1,5 @@
 EDA                 --> the base on which more advanced statistical analysis is built
 histogram           --> A graphical study of the data distribution
+Bin Bias            --> often times the way the histogram is interpretted can be affected by the way we bin the data.
+                        binning, omits data, because of which histogram is unable to represent every data point. Instead of this, we can use
+                        Bee swarm plot available in the seaborn library

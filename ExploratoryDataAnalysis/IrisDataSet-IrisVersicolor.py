@@ -37,3 +37,11 @@ print('size of bin ---> ',n_bin)
 
 #adding the keyword argument bins
 plt.hist(iris_versi_petal_length, bins = n_bin)
+
+
+#***********************************BEE SWARM PLOT **************************************
+#to avoid bining bias, we will use the bee swarm plot, available in the sea born library
+sns.swarmplot(x='species', y='petal_length', data = iris_df)
+plt.xlabel('species')
+plt.ylabel('petal length (cm)')
+plt.show()
