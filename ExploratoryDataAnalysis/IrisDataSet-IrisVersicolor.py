@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import numpy as np
 
 #importing the data from the folder
 iris_df = pd.read_csv('/Users/aakarsh.rajagopalan/Personal documents/Datasets for tableau/Iris length dataset/IRIS.csv')
@@ -22,4 +23,17 @@ sns.set()
 
 #ploting the histogram on petal lengths of iris versicolor
 plt.hist(iris_versi_petal_length)
+
+#adding labels to the axis
+plt.xlabel('petal lenght (cm)')
+plt.ylabel('count')
 plt.show()
+
+#adjusting the bin size
+#ideally the bin size should be the square root of the number of observations
+n_bin = np.sqrt(len(iris_versi_petal_length))
+n_bin = int(n_bin)  #converting to integer data type
+print('size of bin ---> ',n_bin)
+
+#adding the keyword argument bins
+plt.hist(iris_versi_petal_length, bins = n_bin)
