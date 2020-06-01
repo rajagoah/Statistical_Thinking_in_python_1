@@ -52,3 +52,10 @@ plt.show()
 n = len(iris_versi_petal_length)
 arr = np.arange(stop = n+1, start = 1)/n
 print('the array is' , arr)
+
+x_vers = np.sort(np.array(iris_versi_petal_length))
+y_vers = arr
+
+#calculating the ECDF curve
+_=plt.plot(x_vers, y_vers, marker = '.', linestyle = 'none')
+
