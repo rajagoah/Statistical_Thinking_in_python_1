@@ -59,3 +59,9 @@ y_vers = arr
 #calculating the ECDF curve
 _=plt.plot(x_vers, y_vers, marker = '.', linestyle = 'none')
 
+#providing margins for the plot
+plt.margins(0.2)
+
+#adding labels to the axis
+plt.xlabel('petal lenght (cm)')
+plt.ylabel('ECDF')
