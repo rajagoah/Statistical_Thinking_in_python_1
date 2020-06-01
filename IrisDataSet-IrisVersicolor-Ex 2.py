@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 #importing the iris data set
 iris_df = pd.read_csv('/Users/aakarsh.rajagopalan/Personal documents/Datasets for tableau/Iris length dataset/IRIS.csv')
 
@@ -15,6 +15,23 @@ print(iris_ver_len)
 #calculating the mean petal length
 print('Mean petal length of I. Versicolor is ',np.mean(iris_ver_len),'cm')
 
+#************************************ ECDF **********************************************
+#calculating the length of the iris_ver_len
+leng = len(iris_ver_len)
+
+#creating the x  and y variable
+x_vers = np.sort(np.array(iris_ver_len))
+y_vers = np.arange(start = 1, stop = leng+1)/leng
+
+#plotting the ECDF
+_ = plt.plot(x_vers, y_vers, marker = '.', linestyle = 'None')
+
+#labeling the plot
+plt.xlabel('petal length cm')
+plt.ylabel('ECDF')
+
+#providing margins
+plt.margins(0.2)
 #************************************ PERCENTILES ***************************************
 #creating a numpy array with percentile values
 percentiles = np.array([2.5,25,50,75,97.5])
@@ -24,3 +41,14 @@ per_vers = np.percentile(iris_ver_len, percentiles)
 
 #printing the percentiles
 print(per_vers)
+
+#overlaying the percentile information on the same ECDF plot
+_ = plt.plot(per_vers, percentiles/100, color = 'red', marker = 'D', linestyle='none')
+
+#************************************ BOX PLOT ***************************************
+sns.boxplot(x='species', y='petal_length', data = iris_df)
+
+#labeling
+_ = plt.xlabel('species')
+_ = plt.ylabel('petal length cm')
+plt.show()
