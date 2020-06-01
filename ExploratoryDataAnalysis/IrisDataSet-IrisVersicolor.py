@@ -45,3 +45,10 @@ sns.swarmplot(x='species', y='petal_length', data = iris_df)
 plt.xlabel('species')
 plt.ylabel('petal length (cm)')
 plt.show()
+
+#***********************************Emperical Cumulative distribution function **********
+#to avoid obfuscation of data, when the data points are in large numbers, we can use
+#ECDF plots to visualiae the data and understand the distribution
+n = len(iris_versi_petal_length)
+arr = np.arange(stop = n+1, start = 1)/n
+print('the array is' , arr)
