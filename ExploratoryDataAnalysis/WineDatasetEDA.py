@@ -79,7 +79,7 @@ _ = plt.xlabel('Citric acid')
 _ = plt.ylabel('ECDF')
 plt.show()
 
-#plotting RESIDUAL SUGAR, CHLORIDES, FIXED ACIDITY based on quality in box plot mode
+#plotting RESIDUAL SUGAR, CHLORIDES based on quality in box plot mode
 #****************** RESIDUAL SUGAR #******************
 sb.boxplot(x = 'quality', y = 'residual sugar', data = wine_df)
 
@@ -95,3 +95,14 @@ sb.boxplot(x = 'quality', y = 'chlorides', data = wine_df)
 _ = plt.xlabel('quality')
 _ = plt.ylabel('chlorides')
 plt.show()
+
+#plotting SULPHATES based on quality in box plot mode
+#****************** SULPHATES #******************
+sb.swarmplot(x = 'quality', y = 'sulphates', data = wine_df)
+
+#labeling
+_ = plt.xlabel('quality')
+_ = plt.ylabel('Sulphates')
+
+plt.show()
+
