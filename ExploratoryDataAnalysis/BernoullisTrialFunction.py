@@ -13,6 +13,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+def ecdf(data):
+   x = np.sort(data) 
+   n = len(data) 
+   y = np.arange(start = 1, stop = n+1) / n 
+   
+   return x, y
+   
 def perform_bern_trial(n,p):
     
     #creating a counter variable to store the number of successes
@@ -25,7 +32,6 @@ def perform_bern_trial(n,p):
         #condition to check if the even succeeded
         if p > random_number:
             n_success_counter += 1
-    
     return n_success_counter
 
 if __name__ == "__main__":
@@ -46,4 +52,18 @@ if __name__ == "__main__":
     _ = plt.hist(n_defaults,  color = 'green', stacked = True)
     _ = plt.xlabel('number of defaults')
     _ = plt.ylabel('probability')
+    _ = plt.show()
+    
+    #******************* WILL BANKS FAIL ************************
+    """ Plot the number of defaults we got from the above piece of code
+    as an ECDF()
+    """
+    #calling the ECDF function
+    x_defaults_nums, y_ecdf = ecdf(n_defaults)
+    
+    #plotting the ecdf
+    _ = plt.plot(x_defaults_nums, y_ecdf, marker = '.', linestyle = 'none')
+    _ = plt.xlabel('Number of defaults')
+    _ = plt.ylabel('ECDF')
+    _ = plt.margins(0.2)
     _ = plt.show()
