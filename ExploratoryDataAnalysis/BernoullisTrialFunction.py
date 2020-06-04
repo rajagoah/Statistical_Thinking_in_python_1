@@ -11,6 +11,7 @@ The Bernoullis trial has 2 parameters:
 """
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 def perform_bern_trial(n,p):
     
@@ -28,6 +29,21 @@ def perform_bern_trial(n,p):
     return n_success_counter
 
 if __name__ == "__main__":
-    n_success = perform_bern_trial(10, 0.5)
-    print(n_success)
+    #identifying the number of defaults out of 100 loans
+    #probability of a default is 0.05
     
+    #initializing an empty array to store the number of defaults
+    n_defaults = np.empty(1000)
+    
+    #enumerator to run the 'perform_bern_Trial function a 1000 times
+    for i in range(1000):
+        n_defaults[i] = perform_bern_trial(n=100, p = 0.05)
+    
+    #setting sns as default 
+    sns.set()
+    
+    #plotting a histogram to show the probability 
+    _ = plt.hist(n_defaults,  color = 'green', stacked = True)
+    _ = plt.xlabel('number of defaults')
+    _ = plt.ylabel('probability')
+    _ = plt.show()
