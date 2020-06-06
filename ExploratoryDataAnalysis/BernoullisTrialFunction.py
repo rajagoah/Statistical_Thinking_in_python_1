@@ -13,6 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#function to calculate the x axis and y axis of an ECDF graph
 def ecdf(data):
    x = np.sort(data) 
    n = len(data) 
@@ -20,6 +21,7 @@ def ecdf(data):
    
    return x, y
    
+#fuction to calculate the number of successes for bernoullis trial
 def perform_bern_trial(n,p):
     
     #creating a counter variable to store the number of successes
@@ -54,7 +56,6 @@ if __name__ == "__main__":
     _ = plt.ylabel('probability')
     _ = plt.show()
     
-    #******************* WILL BANKS FAIL ************************
     """ Plot the number of defaults we got from the above piece of code
     as an ECDF()
     """
@@ -67,3 +68,7 @@ if __name__ == "__main__":
     _ = plt.ylabel('ECDF')
     _ = plt.margins(0.2)
     _ = plt.show()
+    
+    #******************* WILL BANKS FAIL ************************
+    bank_will_lose_money = np.sum(n_defaults >= 10)
+    print('the probability of number fo defaults that are more than 10 is: ', bank_will_lose_money/len(n_defaults))
