@@ -1,0 +1,11 @@
+Random event / number /variable	--> 	A variable or event or number is said to be random when all the outcomes have equal chances of occurring.
+
+Probability function		--> 	A function that assigns a number between 0 and 1, on the probability of the occurrence of the outcome.
+	
+Discrete distribution		--> 	A distribution in which data can take certain values 
+
+Continuous distribution		--> 	A distribution in which data can take any value is a specified range
+
+Bernoulli's distribution 	--> 	It is a discrete probability distribution of a random event that has a binary outcome (True or false). The success is 					    	associated with a probability 'P' and that of the fail as '1-P'	
+
+Binomial distribution 		--> 	It is a distribution that describes the behaviour the outputs of n random experiments, each having a Bernoulli 							distribution, with probability 'P'
