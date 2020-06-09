@@ -6,6 +6,19 @@ Discrete distribution		--> 	A distribution in which data can take certain values
 
 Continuous distribution		--> 	A distribution in which data can take any value is a specified range
 
+Probability distribution	--> 	A mathematical description of outcomes
+
 Bernoulli's distribution 	--> 	It is a discrete probability distribution of a random event that has a binary outcome (True or false). The success is 					    	associated with a probability 'P' and that of the fail as '1-P'	
 
-Binomial distribution 		--> 	It is a distribution that describes the behaviour the outputs of n random experiments, each having a Bernoulli 							distribution, with probability 'P'
+Binomial distribution 		--> 	It is a distribution that describes the behaviour the outputs of n random experiments, each having a Bernoulli 							distribution, with probability 'P'.
+					The number R of successes in N Bernoulli trials with probability P of success, is Binomially distributed
+					Remember that a Bernoulli trial is one where the outcome of an event is binary. Success or failure.
+					So when we do 10 Bernoulli’s trials of a coin flip, then getting 5 heads is binomially distributed
+
+Bernoulli's trial 		--> 	The simplest trial that can be conducted in statistics/probability. It's an experiment where one can has only one of 2 						possible outcomes.
+
+Probability Mass function	-->	The probability	of a set of discrete outcomes
+
+Parameter			--> 	Parameter is a specific characteristic of a population
+
+Statistic			-->	statistic is a specific characteristic of a sample
